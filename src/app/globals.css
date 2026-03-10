@@ -13,23 +13,68 @@
   box-sizing:border-box;
 }
 
+/* Prevent horizontal scroll issues */
+html,body{
+  width:100%;
+  overflow-x:hidden;
+}
+
 body{
   background:var(--background);
   color:var(--text);
   font-family:"Roboto Condensed", sans-serif;
+  line-height:1.6;
 }
+
+/* Headings */
 
 h1,h2,h3{
   font-family:"Oswald", sans-serif;
   color:var(--heading-color);
 }
 
-section{
-  padding:80px 0;
+/* Images responsive */
+
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
 }
+
+/* Sections */
+
+section{
+  padding:60px 0;
+}
+
+/* Container */
 
 .container{
   width:95%;
   max-width:1200px;
   margin:auto;
+}
+
+/* Tablet */
+
+@media (max-width:1024px){
+
+  section{
+    padding:50px 0;
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+  section{
+    padding:40px 0;
+  }
+
+  .container{
+    width:92%;
+  }
+
 }

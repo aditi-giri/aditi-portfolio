@@ -1,95 +1,173 @@
-#contact{
-    width:100%;
-    padding:0;
-    margin:0;
+#contact {
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-/* Main layout */
-.contact-container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    min-height:420px;
+/* ===================== */
+/* MAIN LAYOUT */
+/* ===================== */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 420px;
 }
 
+/* ===================== */
 /* LEFT SIDE */
-.contact-left{
-    /* background:#F9F9F9; */
-    background:#F9F9F9;
-    display:flex;
-    align-items:center;
+/* ===================== */
+
+.contact-left {
+    background: #F9F9F9;
+    display: flex;
+    align-items: center;
 }
 
-.contact-left-inner{
-    max-width:420px;
-    margin:auto;
-    padding:80px 8%;
+.contact-left-inner {
+    max-width: 420px;
+    margin: auto;
+    padding: 80px 8%;
 }
 
-.contact-left h2{
-    font-size:60px;
-    margin-bottom:20px;
-    color:#B60303;
+.contact-left h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #B60303;
 }
 
-.contact-left p{
-    font-size:18px;
-    line-height:1.6;
+.contact-left p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
+/* ===================== */
 /* RIGHT SIDE */
-.contact-details{
-    background:#AF0000;
-    display:flex;
-    align-items:center;
+/* ===================== */
 
-    clip-path:polygon(
-        8% 0,
-        100% 0,
-        100% 100%,
-        0% 100%
-    );
+.contact-details {
+    background: #AF0000;
+    display: flex;
+    align-items: center;
+
+    clip-path: polygon(8% 0,
+            100% 0,
+            100% 100%,
+            0% 100%);
 }
 
-.contact-details-inner{
-    max-width:480px;
-    margin:auto;
-    padding:80px 80px;
-    display:flex;
-    flex-direction:column;
-    gap:28px;
+.contact-details-inner {
+    max-width: 480px;
+    margin: auto;
+    padding: 80px 80px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
 }
 
+/* ===================== */
 /* CONTACT ITEMS */
+/* ===================== */
 
-.contact-item span{
-    font-weight:600;
-    color:white;
-    display:block;
-    margin-bottom:6px;
-    font-size:20px;
+.contact-item {
+    line-height: 1.5;
 }
 
-.contact-item p{
-    color:#F5F5F5;
+.contact-item span {
+    font-weight: 600;
+    color: white;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+.contact-item p {
+    color: #F5F5F5;
     font-size: 16px;
 }
 
-.contact-item a{
-    color:#FFDADA;
-    text-decoration:none;
+.contact-item a {
+    color: #FFDADA;
+    text-decoration: none;
     font-size: 16px;
 }
 
-.contact-item a:hover{
-    text-decoration:underline;
+.contact-item a:hover {
+    text-decoration: underline;
 }
 
+/* ===================== */
 /* FOOTER BAR */
+/* ===================== */
 
-.footer-bar{
-    background:#111;
-    color:#aaa;
-    text-align:center;
-    padding:15px;
-    font-size:14px;
+.footer-bar {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+
+
+/* ===================== */
+/* TABLET */
+/* ===================== */
+
+@media (max-width:1024px) {
+
+    .contact-left h2 {
+        font-size: 48px;
+    }
+
+    .contact-left-inner {
+        padding: 60px 8%;
+    }
+
+    .contact-details-inner {
+        padding: 60px 60px;
+    }
+
+}
+
+
+
+/* ===================== */
+/* MOBILE */
+/* ===================== */
+
+@media (max-width:768px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* remove diagonal shape on mobile */
+    .contact-details {
+        clip-path: none;
+    }
+
+    .contact-left-inner {
+        padding: 50px 25px;
+        text-align: center;
+    }
+
+    .contact-left h2 {
+        font-size: 38px;
+    }
+
+    .contact-left p {
+        font-size: 16px;
+    }
+
+    .contact-details-inner {
+        padding: 50px 25px;
+        gap: 22px;
+    }
+
+    .contact-item span {
+        font-size: 18px;
+    }
+
 }
